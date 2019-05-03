@@ -1,6 +1,6 @@
 Namespace(checkpoint_dir='final_model_checkpoint_cmd.pth', image_path='flowers/valid/38/image_05829.jpg', mapper='cat_to_name.json', topk=10)
 102
-[Linear(in_features=25088, out_features=135, bias=True), ReLU(), Dropout(p=0.3333), Linear(in_features=135, out_features=102, bias=True), LogSoftmax()]
+[Linear(in_features=25088, out_features=135, bias=True), ReLU(), Dropout(p=0.4), Linear(in_features=135, out_features=102, bias=True), LogSoftmax()]
 VGG(
   (features): Sequential(
     (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
@@ -38,22 +38,25 @@ VGG(
   (classifier): Sequential(
     (0): Linear(in_features=25088, out_features=135, bias=True)
     (1): ReLU()
-    (2): Dropout(p=0.3333)
+    (2): Dropout(p=0.4)
     (3): Linear(in_features=135, out_features=102, bias=True)
     (4): LogSoftmax()
   )
 )
-Predicted Classes:  ['38', '10', '14', '41', '57', '33', '35', '92', '30', '22']
+In Image Size: (542, 500)
+newHeight :277
+Out Image Size: (256, 277)
+Predicted Classes:  ['38', '10', '25', '29', '22', '100', '35', '57', '63', '79']
 Class Names: 
 great masterwort
 globe thistle
-spear thistle
-barbeton daisy
-gaura
-love in the mist
-alpine sea holly
-bee balm
-sweet william
+grape hyacinth
+artichoke
 pincushion flower
-Predicted Probability:  [0.84510255 0.09729524 0.01101752 0.00715402 0.00679035 0.00554205
- 0.0043598  0.00355007 0.00208423 0.00201657]
+blanket flower
+alpine sea holly
+gaura
+black-eyed susan
+toad lily
+Predicted Probability:  [0.7863115  0.1186498  0.00950409 0.00771005 0.00765284 0.00667017
+ 0.0063313  0.00578876 0.00454003 0.0037471 ]

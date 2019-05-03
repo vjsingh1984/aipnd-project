@@ -1,130 +1,70 @@
-Namespace(arch='vgg', checkpoint_dir='final_model_checkpoint_cmd.pth', data_dir='flowers', dropout=0.3333, epochs=20, gpu=True, hidden_units='135', learnrate=5e-05, mapper='cat_to_name.json')
-[Linear(in_features=25088, out_features=135, bias=True), ReLU(), Dropout(p=0.3333), Linear(in_features=135, out_features=102, bias=True), LogSoftmax()]
+Namespace(arch='vgg', checkpoint_dir='final_model_checkpoint_cmd.pth', data_dir='flowers', dropout=0.4, epochs=10, gpu=True, hidden_units='135', learnrate=5e-05, mapper='cat_to_name.json')
+[Linear(in_features=25088, out_features=135, bias=True), ReLU(), Dropout(p=0.4), Linear(in_features=135, out_features=102, bias=True), LogSoftmax()]
 --------------------------------------------------
-Epoch 1 took : 38 seconds
-Batch: 26	
-Test loss: 2.899	
-Test percentage accuracy: 0.406
-2019-05-03T04:56:33.428486	Epoch 1/20	Train loss: 3.9723
+Epoch 1 took : 179 seconds
+Batch: 52	
+Test loss: 2.616	
+Test percentage accuracy: 0.485
+2019-05-03T16:59:31.639938	Epoch 1/10	Train loss: 3.8884
 --------------------------------------------------
-Epoch 2 took : 36 seconds
-Batch: 26	
-Test loss: 1.973	
-Test percentage accuracy: 0.604
-2019-05-03T04:57:12.770824	Epoch 2/20	Train loss: 2.9159
+Epoch 2 took : 179 seconds
+Batch: 52	
+Test loss: 1.715	
+Test percentage accuracy: 0.674
+2019-05-03T17:02:39.177353	Epoch 2/10	Train loss: 2.7591
 --------------------------------------------------
-Epoch 3 took : 36 seconds
-Batch: 26	
-Test loss: 1.484	
-Test percentage accuracy: 0.718
-2019-05-03T04:57:51.825050	Epoch 3/20	Train loss: 2.3520
+Epoch 3 took : 179 seconds
+Batch: 52	
+Test loss: 1.304	
+Test percentage accuracy: 0.755
+2019-05-03T17:05:45.834450	Epoch 3/10	Train loss: 2.2218
 --------------------------------------------------
-Epoch 4 took : 36 seconds
-Batch: 26	
-Test loss: 1.207	
-Test percentage accuracy: 0.760
-2019-05-03T04:58:31.241489	Epoch 4/20	Train loss: 2.0114
+Epoch 4 took : 179 seconds
+Batch: 52	
+Test loss: 1.059	
+Test percentage accuracy: 0.788
+2019-05-03T17:08:52.893912	Epoch 4/10	Train loss: 1.9159
 --------------------------------------------------
-Epoch 5 took : 36 seconds
-Batch: 26	
-Test loss: 1.030	
-Test percentage accuracy: 0.784
-2019-05-03T04:59:10.874435	Epoch 5/20	Train loss: 1.7968
+Epoch 5 took : 179 seconds
+Batch: 52	
+Test loss: 0.904	
+Test percentage accuracy: 0.825
+2019-05-03T17:11:59.986342	Epoch 5/10	Train loss: 1.6965
 --------------------------------------------------
-Epoch 6 took : 36 seconds
-Batch: 26	
-Test loss: 0.899	
-Test percentage accuracy: 0.828
-2019-05-03T04:59:50.135020	Epoch 6/20	Train loss: 1.6093
+Epoch 6 took : 179 seconds
+Batch: 52	
+Test loss: 0.769	
+Test percentage accuracy: 0.847
+2019-05-03T17:15:06.978738	Epoch 6/10	Train loss: 1.5235
 --------------------------------------------------
-Epoch 7 took : 36 seconds
-Batch: 26	
-Test loss: 0.800	
-Test percentage accuracy: 0.844
-2019-05-03T05:00:29.805037	Epoch 7/20	Train loss: 1.4818
+Epoch 7 took : 179 seconds
+Batch: 52	
+Test loss: 0.709	
+Test percentage accuracy: 0.860
+2019-05-03T17:18:14.274459	Epoch 7/10	Train loss: 1.4295
 --------------------------------------------------
-Epoch 8 took : 36 seconds
-Batch: 26	
-Test loss: 0.727	
-Test percentage accuracy: 0.855
-2019-05-03T05:01:08.730707	Epoch 8/20	Train loss: 1.3909
+Epoch 8 took : 179 seconds
+Batch: 52	
+Test loss: 0.633	
+Test percentage accuracy: 0.874
+2019-05-03T17:21:21.405135	Epoch 8/10	Train loss: 1.3099
 --------------------------------------------------
-Epoch 9 took : 36 seconds
-Batch: 26	
-Test loss: 0.669	
+Epoch 9 took : 179 seconds
+Batch: 52	
+Test loss: 0.572	
 Test percentage accuracy: 0.879
-2019-05-03T05:01:48.033522	Epoch 9/20	Train loss: 1.2670
+2019-05-03T17:24:28.462563	Epoch 9/10	Train loss: 1.2170
 --------------------------------------------------
-Epoch 10 took : 36 seconds
-Batch: 26	
-Test loss: 0.614	
-Test percentage accuracy: 0.882
-2019-05-03T05:02:27.146879	Epoch 10/20	Train loss: 1.2259
---------------------------------------------------
-Epoch 11 took : 36 seconds
-Batch: 26	
-Test loss: 0.581	
-Test percentage accuracy: 0.880
-2019-05-03T05:03:06.327009	Epoch 11/20	Train loss: 1.1417
---------------------------------------------------
-Epoch 12 took : 36 seconds
-Batch: 26	
-Test loss: 0.551	
-Test percentage accuracy: 0.879
-2019-05-03T05:03:45.068119	Epoch 12/20	Train loss: 1.0966
---------------------------------------------------
-Epoch 13 took : 36 seconds
-Batch: 26	
-Test loss: 0.512	
-Test percentage accuracy: 0.894
-2019-05-03T05:04:23.961167	Epoch 13/20	Train loss: 1.0516
---------------------------------------------------
-Epoch 14 took : 36 seconds
-Batch: 26	
-Test loss: 0.497	
-Test percentage accuracy: 0.890
-2019-05-03T05:05:03.008570	Epoch 14/20	Train loss: 1.0201
---------------------------------------------------
-Epoch 15 took : 36 seconds
-Batch: 26	
-Test loss: 0.467	
-Test percentage accuracy: 0.896
-2019-05-03T05:05:41.767839	Epoch 15/20	Train loss: 0.9976
---------------------------------------------------
-Epoch 16 took : 36 seconds
-Batch: 26	
-Test loss: 0.457	
-Test percentage accuracy: 0.898
-2019-05-03T05:06:20.990954	Epoch 16/20	Train loss: 0.9328
---------------------------------------------------
-Epoch 17 took : 36 seconds
-Batch: 26	
-Test loss: 0.433	
-Test percentage accuracy: 0.905
-2019-05-03T05:07:00.138717	Epoch 17/20	Train loss: 0.8935
---------------------------------------------------
-Epoch 18 took : 36 seconds
-Batch: 26	
-Test loss: 0.421	
-Test percentage accuracy: 0.906
-2019-05-03T05:07:39.214987	Epoch 18/20	Train loss: 0.8881
---------------------------------------------------
-Epoch 19 took : 36 seconds
-Batch: 26	
-Test loss: 0.413	
-Test percentage accuracy: 0.909
-2019-05-03T05:08:18.602117	Epoch 19/20	Train loss: 0.8551
---------------------------------------------------
-Epoch 20 took : 36 seconds
-Batch: 26	
-Test loss: 0.400	
-Test percentage accuracy: 0.918
-2019-05-03T05:08:57.571193	Epoch 20/20	Train loss: 0.8167
+Epoch 10 took : 179 seconds
+Batch: 52	
+Test loss: 0.535	
+Test percentage accuracy: 0.892
+2019-05-03T17:27:35.506063	Epoch 10/10	Train loss: 1.1805
 Test Results are as follows:
-Batch: 26	
-Test loss: 0.401	
-Test percentage accuracy: 0.917
+Batch: 52	
+Test loss: 0.545	
+Test percentage accuracy: 0.892
 Validations Results are as follows:
-Batch: 26	
-Test loss: 0.399	
-Test percentage accuracy: 0.918
+Batch: 52	
+Test loss: 0.552	
+Test percentage accuracy: 0.887
