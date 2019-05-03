@@ -365,13 +365,24 @@ def imshow(image, ax=None, title=None):
     return ax
 
 
-def predict(model, pred_image_path, topk=5):
+def predict(model, pred_image_path, device,topk=5):
     ''' Predict the class (or classes) of an image using a trained deep learning model.
     '''
+    print(device)
+    if device == 'cuda':
+        model.to(device)
     image = torch.FloatTensor([process_image(Image.open(pred_image_path))])
     model.eval()
-    output = model.forward(Variable(image))
-    pobabillityList = torch.exp(output).data.numpy()[0]
+    if device == 'cuda':
+       variableimage = Variable(image).cuda()
+    else:
+       variableimage = Variable(image)
+
+    output = model.forward(variableimage)
+    if device == 'cuda':
+        pobabillityList = torch.exp(output).cpu().data.numpy()[0]
+    else:
+        pobabillityList = torch.exp(output).data.numpy()[0]
     
 
     idx_to_class = { v : k for k,v in model.class_to_idx.items()}
