@@ -35,7 +35,7 @@ def main():
     parser.add_argument('--gpu', type=bool, default=False, help='Is GPU Enabled')
     parser.add_argument('--arch', type=str, default='vgg', help='Model architecture [available: vgg,densenet]', required=True)
     parser.add_argument('--learnrate', type=float, default=0.0001, help='Learning Rate')
-    parser.add_argument('--hidden_units', type=str, default='512,256', help='hidden units in layers')
+    parser.add_argument('--hidden_units', type=str, default='132', help='hidden units in layers')
     parser.add_argument('--dropout',type=float,default=0.25,help="Dropout for network")
     parser.add_argument('--epochs', type=int, default=7, help='training Epochs')
     parser.add_argument('--data_dir', type=str, default='flowers', help='dataset path')

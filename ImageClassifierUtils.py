@@ -69,7 +69,7 @@ def getDataLoaderFn(image_datasets):
     # TODO: Using the image datasets and the trainforms, define the dataloaders
     dataloaders = {
         x: torch.utils.data.DataLoader(
-            image_datasets[x], batch_size=32,
+            image_datasets[x], batch_size=16,
             shuffle=True, num_workers=4
         )
         for x in [TRAIN, VAL, TEST]
@@ -305,7 +305,6 @@ def loadCheckPoint(path):
 
     return (model,optimizer)
 
-
 def process_image(image):
     ''' Scales, crops, and normalizes a PIL image for a PyTorch model,
         returns an Numpy array
@@ -314,14 +313,16 @@ def process_image(image):
     # TODO: Process a PIL image for use in a PyTorch model
     origSize= 256
     rgb=255 # from 0 -255
-    size = origSize, origSize
+    
     reqSize = 224
-    image.thumbnail(size, Image.ANTIALIAS)
-    image = image.crop((int((origSize - reqSize)/2),
+    
+    resizedimage = getResizedImage(image,resize=origSize)
+    
+    procimage = resizedimage.crop((int((origSize - reqSize)/2),
                         int((origSize - reqSize)/2),
                         int((origSize + reqSize)/2),
                         int((origSize + reqSize)/2)))
-    numpyImage = np.array(image)
+    numpyImage = np.array(procimage)
     numpyImage = numpyImage/float(rgb)
         
     image1 = numpyImage[:,:,0]
@@ -413,3 +414,18 @@ def getHiddenUnits(strUnitDelimited):
         new_hidden_units.append(int(item))
     return new_hidden_units
 
+def getResizedImage(image,resize=256):
+    currHeight, currWidth = image.size
+    print("In Image Size: " + str(image.size))
+    new_image = None
+    if currWidth < currHeight:
+        newHeight = int(currHeight * resize / currWidth)
+        print("newHeight :" + str(newHeight))
+        new_image = image.resize((resize,newHeight))
+    else:
+        newWidth = int(currWidth * resize / currHeight)
+        print("newWidth: " + newWidth)
+        new_image = image.resize((newWidth,resize))
+                     
+    print("Out Image Size: " + str(new_image.size))
+    return new_image
