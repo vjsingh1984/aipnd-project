@@ -69,7 +69,7 @@ def getDataLoaderFn(image_datasets):
     # TODO: Using the image datasets and the trainforms, define the dataloaders
     dataloaders = {
         x: torch.utils.data.DataLoader(
-            image_datasets[x], batch_size=16,
+            image_datasets[x], batch_size=8,
             shuffle=True, num_workers=4
         )
         for x in [TRAIN, VAL, TEST]
